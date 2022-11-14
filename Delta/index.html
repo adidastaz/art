@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Delta-First Crypto Competitive Software</title>
+
+    <!--Icons Link-->
+
+    <script src="https://kit.fontawesome.com/85b7168e36.js" crossorigin="anonymous"></script>
+
+    <!----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+    <!--CSS STYLING-->
+
+    <style>
+
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            overflow-x: hidden;
+            transition: 3s;
+        }
+
+        .menu {
+            background-color: #262626;
+            width: 100vw;
+            height: 10vh;
+            color: #fff;
+            padding-top: 0.7rem;
+            padding-left: 2.5rem;
+            z-index: 1;
+
+            position: fixed;
+        }
+        
+        .menu .fa-bitcoin {
+            font-size: 2rem;
+            padding-top: 7px;
+            height: 70%;
+            color: aqua;
+        }
+
+        .menu .nameC {
+            color: #fff;
+            font-weight: bold;
+            padding-left: 10px;
+        }
+
+        .options {
+            text-decoration: none;
+            color: #fff;
+            padding-right: 1.5rem;
+            margin-left: 5rem;
+            font-weight: bolder;
+            font-family: Roboto;
+        }
+        
+        .options:hover {
+            color: orangered;
+        }
+
+        .homee {
+            color: rgb(123, 123, 201);
+            text-decoration: overline;
+        }
+
+        /*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+        /*INTRO TO OUR WEBSITE*/
+
+        .between {
+            width: 100vw;
+            height: 5rem;
+        }
+
+        .intro {
+            width: 100vw;
+            height: 50vh;
+            text-align: center;
+            background: linear-gradient(to right, rgba(255, 0, 0, 1), rgba(200, 0, 0, 0.8), rgba(150, 0, 0, 0.6), rgba(100, 0, 0, 0.4), rgba(50, 0, 0, 0.2));
+            margin-top: 4%;
+        }
+
+        .embrace {
+            color: #000;
+            font-size: 3rem;
+            font-family: Roboto;
+            font-weight: bolder;
+        }
+
+        .talent {
+            font-size: 5rem;
+            font-family: fantasy;
+            letter-spacing: 1cm;
+            margin-top: -2%;
+        }
+
+        .t {
+            color: rgb(0, 4, 255);
+        }
+
+        .a {
+            color: rgba(17, 20, 228, 0.932);
+        }
+
+        .l {
+            color: rgba(28, 31, 204, 0.822);
+        }
+
+        .e {
+            color: rgba(31, 34, 168, 0.658);
+        }
+
+        .n {
+            color: rgba(30, 32, 155, 0.774);
+        }
+
+        .t2 {
+            color: rgba(29, 31, 124, 0.692);
+        }
+
+        .def {
+            font-size: 2.5rem;
+            color: #000;
+            margin-top: 2%;
+        }
+
+        .play {
+            background-color: rgba(20, 20, 230, 0.938);
+            border-color: rgba(20, 20, 230, 0.938);
+            border-radius: 5px;
+            font-size: 1rem;
+            color: #fff;
+            width: 130px;
+            height: 50px;
+            cursor: pointer;
+            margin-right: 30px;
+            font-weight: bold;
+        }
+
+        .create {
+            background-color: rgba(255, 0, 212, 0.89);
+            border-color: rgba(255, 0, 212, 0.89);
+            border-radius: 5px;
+            font-size: 1rem;
+            color: #fff;
+            width: 130px;
+            height: 50px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        /*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+        /*Top Games and videos*/
+
+        .between1 {
+            width: 100vw;
+            height: 20vh;
+        }
+
+        .topGames {
+            width: 100vw;
+            height: 50vh;
+            background: linear-gradient(to bottom, rgb(85, 82, 82), rgb(165, 156, 156));
+            
+        }
+
+        .topGames iframe {
+            padding-left: 20%;
+            padding-top: -2%;
+        }
+
+
+        /*-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+        /*Some Information About the Website , nb of players...*/
+
+        .info {
+            width: 100vw;
+            height: 120vh;
+            margin-top: 50px;
+            background-color: aqua;
+
+            position: relative;
+        }
+
+        .nbOfP {
+            position: absolute;
+            top: 10%;
+            left: 8%;
+
+            font-size: 50px;
+            color: rgb(66, 66, 202);
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-weight: bolder;
+        }
+
+        .p {
+            color: #474444;
+            font-size: 15px;
+            font-weight: 550; 
+
+            position: absolute;  
+            top: 80px;
+            left: 30px;
+        }
+
+        .gD {
+            position: absolute;
+            top: 10%;
+            left: 30%;
+
+            font-size: 50px;
+            color: rgb(66, 66, 202);
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-weight: bolder;
+        }
+
+        .g {
+            color: #474444;
+            font-size: 15px;
+            font-weight: 550; 
+
+            position: absolute;  
+            top: 80px;
+            left: -10px;
+        }
+
+        .d {
+            color: #474444;
+            font-size: 15px;
+            font-weight: 550; 
+
+            position: absolute;  
+            top: 80px;
+            left: 50px;
+        }
+
+        .dT {
+            position: absolute;
+            top: 10%;
+            left: 55%;
+
+            font-size: 50px;
+            color: rgb(66, 66, 202);
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-weight: bolder;
+        }
+
+        .dd {
+            color: #474444;
+            font-size: 15px;
+            font-weight: 550; 
+
+            position: absolute;  
+            top: 80px;
+            left: -25px;
+        }
+
+        .t3 {
+            color: #474444;
+            font-size: 15px;
+            font-weight: 550; 
+
+            position: absolute;  
+            top: 80px;
+            left: 34px;
+        }
+
+        .mP {
+            position: absolute;
+            top: 10%;
+            left: 75%;
+
+            font-size: 50px;
+            color: rgb(66, 66, 202);
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-weight: bolder;
+        }
+
+        .m {
+            color: #474444;
+            font-size: 15px;
+            font-weight: 550; 
+
+            position: absolute;  
+            top: 80px;
+            left: 50px;
+        }
+
+        .pr {
+            color: #474444;
+            font-size: 15px;
+            font-weight: 550; 
+
+            position: absolute;  
+            top: 80px;
+            right: 50px;
+        }
+
+        .earnALiving {
+            font-size: 40px;
+            font-family: fantasy;
+            color: #474444;
+            text-transform: capitalize;
+
+            position: absolute;
+            top: 300px;
+            left: 30%;
+        }
+
+        .advice {
+            font-size: 20px;
+            color: rgb(70, 64, 64);
+
+            position: absolute;
+            top: 400px;
+            left: 160px;
+            text-align: center;
+        }
+
+        .fa-scale-balanced {
+            font-size: 70px;
+            color: rgb(218, 42, 203);
+
+            position: absolute;
+            top: 550px;
+            left: 15%;
+        }
+
+        .fair {
+            color: rgb(70, 64, 64);
+            font-size: 20px;
+            font-weight: bold;
+
+            position: absolute;
+            top: 610px;
+            left: 13%;
+        }
+
+        .fa-chess-knight {
+            font-size: 70px;
+            color: rgb(218, 42, 203);
+
+            position: absolute;
+            top: 550px;
+            left: 47.2%;
+        }
+
+        .multi {
+            color: rgb(70, 64, 64);
+            font-size: 20px;
+            font-weight: bold;
+
+            position: absolute;
+            top: 610px;
+            left: 40.4%;
+        }
+
+        .info .fa-bitcoin {
+            font-size: 70px;
+            color: rgb(218, 42, 203);
+
+            position: absolute;
+            top: 550px;
+            left: 77%;
+        }
+
+        .prizes {
+            color: rgb(70, 64, 64);
+            font-size: 20px;
+            font-weight: bold;
+
+            position: absolute;
+            top: 610px;
+            left: 75%;
+        }
+
+        .howTo {
+            position: absolute;
+            top: 730px;
+            left: 41%;
+
+            font-size: 20px;
+            font-weight: bold;
+            width: 15%;
+            height: 5%;
+            border: 2px solid rgba(64, 64, 184, 0.938);
+            border-radius: 5px;
+            background-color: rgba(64, 64, 184, 0.938);
+            color: #fff;
+            cursor: pointer;
+        }
+
+        /*---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+        /*Footer*/
+
+        .footer {
+            background-color: #1e1e1f;
+            width: 100vw;
+            height: 60vh;
+            margin-top: 10%;
+
+            position: relative;
+        }
+
+        .devf {
+            color: #fff;
+            font-size: 25px;
+            font-family: Roboto;
+
+            position: absolute;
+            top: 50px;
+            left: 10%;
+        }
+
+        .devList {
+            list-style: none;
+            line-height: 1cm;
+
+            position: absolute;
+            top: 90px;
+            left: 7%;
+        }
+
+        .devList li a {
+            font-size: 20px;
+            font-family: monospace;
+            text-decoration: none;
+            color: #beacacef;
+        }
+
+        .devList li a:hover {
+            color: #fff;
+            text-decoration: underline;
+        }
+
+        .playerf {
+            color: #fff;
+            font-size: 25px;
+            font-family: Roboto;
+
+            position: absolute;
+            top: 50px;
+            left: 33%;
+        }
+
+        .playerList {
+            list-style: none;
+            line-height: 1cm;
+
+            position: absolute;
+            top: 90px;
+            left: 30%;
+        }
+
+        .playerList li a {
+            font-size: 20px;
+            font-family: monospace;
+            text-decoration: none;
+            color: #beacacef;
+        }
+
+        .playerList li a:hover {
+            color: #fff;
+            text-decoration: underline;
+        }
+
+        .companyf {
+            color: #fff;
+            font-size: 25px;
+            font-family: Roboto;
+
+            position: absolute;
+            top: 50px;
+            left: 51%;
+        }
+
+        .companyList {
+            list-style: none;
+            line-height: 1cm;
+
+            position: absolute;
+            top: 90px;
+            left: 48%;
+        }
+
+        .companyList li a {
+            font-size: 20px;
+            font-family: monospace;
+            text-decoration: none;
+            color: #beacacef;
+        }
+
+        .companyList li a:hover {
+            color: #fff;
+            text-decoration: underline;
+        }
+
+        .footer .fa-bitcoin {
+            font-size: 2rem;
+            color: #fff;
+
+            position: absolute;
+            top: 63px;
+            right: 18%;
+        }
+
+        .footer .nameC {
+            color: #fff;
+            font-weight: bold;
+            padding-left: 10px;
+        }
+
+        .footer .fa-facebook {
+            position: absolute;
+            top: 120px;
+            right: 26.4%;
+
+            font-size: 2rem;
+            color: rgb(7, 7, 194);
+        }
+
+        .footer .fa-twitter {
+            position: absolute;
+            top: 120px;
+            right: 23%;
+
+            font-size: 2rem;
+            color: rgb(24, 154, 214); 
+        }
+
+        .footer .fa-linkedin-in {
+            position: absolute;
+            top: 120px;
+            right: 19.3%;
+
+            font-size: 2rem;
+            color: #fff;
+            background-color: rgb(42, 42, 177);
+            height: 35px;
+            width: 40px;
+            text-align: center;
+        }
+
+        .footer .alone {
+            font-size: 2.2rem;
+            color: aqua;
+
+            position: absolute;
+            top: 120px;
+            right: 15.7%;
+        }
+
+        .footer .copyR {
+            font-size: 20px;
+            color: #beacacef;
+            font-family: monospace;
+
+            position: absolute;
+            top: 150px;
+            right: 14%;
+        }
+
+        .footer .fa-copyright {
+            font-size: 15px;
+            color: #beacacef;
+
+            position: absolute;
+            top: 174px;
+            right: 27%;
+        }
+
+
+    </style>
+
+    <!------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+</head>
+<body>
+    <div class="menu">
+        <i class="fa-brands fa-bitcoin"><span class="nameC">DELTA</span></i>
+        <a class="options homee" href="./index.html">HOME</a>
+        <a class="options" href="./developers.html" target="_blank">DEVELOPERS</a>
+        <a class="options" href="./players.html" target="_blank">PLAYERS</a>
+        <a class="options" href="#">ABOUT US</a>
+        <a class="options" href="#">NEWS</a>
+        <a class="options" href="#">LOG IN</a>
+    </div>
+
+    <div class="between"></div>
+
+    <!--Intro to the home page--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+    <div class="intro">
+        <h1 class="embrace">EMBRACE YOUR INNER</h1>
+        <div class="talent"><span class="t">T</span><span class="a">A</span><span class="l">L</span><span class="e">E</span><span class="n">N</span><span class="t2">T</span></div>
+        <p class="def">First Crypto Competitive Platform For Skill Games</p>
+        <a href="#"><button class="play">Play Games</button></a>
+        <a href="./developers.html" target="_blanks"><button class="create">Create Games</button></a>
+    </div>
+    
+    <!--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+    <div class="between1"></div>
+
+    <div class="topGames">
+        <iframe width="400" height="400" src="https://www.youtube.com/embed/344Zv2m9TYI" allowfullscreen></iframe>
+
+    </div>
+
+    <div class="info">
+        <p class="nbOfP">30 M+<br><span class="p">PLAYERS</span></p>
+        <p class="gD">30 K+<br><span class="g">GAME</span> <span class="d">DEVELOPERS</span></p>
+        <p class="dT">5 M+<br><span class="dd">DAILY</span> <span class="t3">TOURNAMENTS</span></p>
+        <p class="mP">$100 M+<br><span class="m">MONTHLY</span><span class="pr">PRIZES</span></p>
+
+        <h1 class="earnALiving">Earn a living doing what you love!</h1>
+
+        <p class="advice">Embrace your inner champion, become a delta player and compete with players around the world. Enjoy skills games and big prizes,<br> deposit with your crypto wallet and withdraw directly to your wallet.</p>
+
+        <i class="fa-solid fa-scale-balanced"></i>
+        <p class="fair">Fair Competition</p>
+
+        <i class="fa-solid fa-chess-knight"></i>
+        <p class="multi">Multiplayer Tournaments</p>
+
+        <i class="fa-brands fa-bitcoin"></i>
+        <p class="prizes">Crypto Prizes</p>
+
+        <a href="#"><button class="howTo">See How It Works</button></a>
+
+    </div>
+
+    <!------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+    <!--Footer-->
+
+    <div class="footer">
+        <h1 class="devf">DEVELOPERS</h1>
+        <ul class="devList">
+            <li><a href="#">Developer Console Login</a></li>
+            <li><a href="#">Documentation</a></li>
+            <li><a href="#">Support</a></li>
+        </ul>
+
+        <h1 class="playerf">PLAYER</h1>
+        <ul class="playerList">
+            <li><a href="#">Delta Games</a></li>
+            <li><a href="#">Player FAQ</a></li>
+            <li><a href="#">Player Support</a></li>
+        </ul>
+
+        <h1 class="companyf">COMPANY</h1>
+        <ul class="companyList">
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Legal</a></li>
+            <li><a href="#">Privacy</a></li>
+            <li><a href="#">Do Not Sell My Information</a></li>
+        </ul>
+
+        <a href="./index.html"><i class="fa-brands fa-bitcoin"><span class="nameC">DELTA</span></i></a>
+        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="./index.html"><i class="fa-brands fa-bitcoin alone"></i></a>
+        <i class="fa-regular fa-copyright"></i>
+        <p class="copyR">2023 Delta Igc.</p>
+    </div>
+
+    
+    
+</body>
+</html>

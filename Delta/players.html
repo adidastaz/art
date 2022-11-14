@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Players-Delta-First Crypto Competitive Software</title>
+
+    <script src="https://kit.fontawesome.com/85b7168e36.js" crossorigin="anonymous"></script>
+
+    <!--Styling CSS-->
+
+    <style>
+
+        /*Top Page*/
+
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            overflow-x: hidden;
+            transition: 3s;
+        }
+
+        .menu {
+            background-color: #262626;
+            width: 100vw;
+            height: 10vh;
+            color: #fff;
+            padding-top: 0.7rem;
+            padding-left: 2.5rem;
+            z-index: 1;
+
+            position: fixed;
+        }
+        
+        .menu .fa-bitcoin {
+            font-size: 2rem;
+            padding-top: 7px;
+            height: 70%;
+            color: aqua;
+        }
+
+        .menu .nameC {
+            color: #fff;
+            font-weight: bold;
+            padding-left: 10px;
+        }
+
+        .options {
+            text-decoration: none;
+            color: #fff;
+            padding-right: 1.5rem;
+            margin-left: 5rem;
+            font-weight: bolder;
+            font-family: Roboto;
+        }
+        
+        .options:hover {
+            color: orangered;
+        }
+
+        .players {
+            color: rgb(123, 123, 201);
+            text-decoration: overline;
+        }
+
+        .between {
+            width: 100vw;
+            height: 30px;
+            margin: 0;
+            padding: 0;
+        }
+
+        /*UnderTop*/
+
+        .underTop {
+            width: 100vw;
+            height: 30vh;
+            background-color: rgb(14, 196, 241);
+            border-radius: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            margin-top: 1.2rem;
+        }
+
+        .underTop p {
+            font-size: 2.5rem;
+            font-family: fantasy;
+            padding-top: 2rem;
+            color: rgb(14, 18, 241);
+            animation: changeColor 5s 2s infinite;
+        }
+
+        @keyframes changeColor {
+            20%{
+                color: red;
+        }
+            70%{
+                color: rgb(219, 18, 219);
+        }
+        }
+
+        /*body someInfo*/
+
+        .someInfo {
+            width: 100vw;
+            height: 70vh;
+            background: linear-gradient(to bottom, rgba(216, 38, 136, 0.8), rgba(176, 29, 221, 0.5));
+            
+            border-radius: 10rem;
+
+            position: relative;
+        }
+
+        .someInfo img {
+            width: 400px;
+            height: 300px;
+            border: 2px solid #fff;
+            z-index: 1;
+
+            position: absolute;
+            top: 17%;
+            left: 20%;
+        }
+
+        .someInfo h1 {
+            position: absolute;
+            top: 12%;
+            right: 27%;
+
+            color: rgb(119, 0, 255);
+        }
+
+        .someInfo ul {
+            font-size: 1.5rem;
+            color: rgb(119, 0, 255);
+            line-height: 1.5;
+
+            position: absolute;
+            top: 24%;
+            right: 15%;
+        }
+
+        .someInfo button {
+            width: 10vw;
+            height: 7vh;
+            background-color: rgb(47, 0, 255);
+            font-size: 1rem;
+            text-align: center;
+            border: 1px solid rgb(47, 0, 255);
+            border-radius: 5px;
+            color: #fff;
+            cursor: pointer;
+
+            position: absolute;
+            top: 82%;
+            right: 37%;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <div class="menu">
+        <i class="fa-brands fa-bitcoin"><span class="nameC">DELTA</span></i>
+        <a class="options" href="./index.html">HOME</a>
+        <a class="options" href="./developers.html" target="_blank">DEVELOPERS</a>
+        <a class="options players" href="#">PLAYERS</a>
+        <a class="options" href="#">ABOUT US</a>
+        <a class="options" href="#">NEWS</a>
+        <a class="options" href="#">LOG IN</a>
+    </div>
+
+    <div class="between"></div>
+
+    <div class="underTop">
+        <p>BECOME A CHAMPION</p>
+    </div>
+
+    <div class="someInfo">
+        <!--img src="./game1.webp" alt="game photo"-->
+        <img src="./game1.webp" alt="game photo">
+
+        <h1>The Delta experience</h1>
+        <ul>
+            <li>Fun & fair tournaments</li>
+            <li>Fast tournaments, withdrawals and deposits</li>
+            <li>Choose your game to compete</li>
+            <li>Win big prizes faster than you think</li>
+            <li>Total Skill based games</li>
+            <li>Invest for a passive stable income</li>
+        </ul>
+        <a href="#"><button>Find your game</button></a>
+    </div>
+
+    <!--JAVASCRIPT-->
+
+    <script>
+
+        
+
+    </script>
+    
+</body>
+</html>
